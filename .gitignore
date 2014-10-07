@@ -1,0 +1,5 @@
+*~
+.tern-port
+node_modules/
+json/
+pdf/

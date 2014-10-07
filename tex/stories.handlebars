@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{scrartcl}
+% page dimensions
+\usepackage[a4paper,top=50pt,bottom=90pt,left=50pt,right=50pt]{geometry}
+% colors
+\usepackage[usenames,dvipsnames]{xcolor}
+% fonts
+\usepackage{fontspec}
+\setmainfont{PT Serif}
+\setsansfont{PT Sans}
+\setmonofont{PT Mono}
+% languages
+\usepackage{polyglossia}
+\setmainlanguage{ukrainian}
+% header and footer
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{30pt}
+\pagestyle{fancy}
+\lhead[]{}
+\chead[]{}
+\rhead[]{\textit{\scriptsize для коханої Світлани}}
+\lfoot[]{}
+\cfoot[]{}
+\rfoot[]{\thepage}
+% hyperref
+\usepackage[colorlinks,linktoc=all,linkcolor=Blue]{hyperref}
+\hypersetup{%
+  pdftitle={Ukrainian folk stories}%
+  ,pdfsubject={Ukrainian folk stories}%
+  ,pdfauthor={Volodymuyr Prokopyuk}%
+  ,pdfcreator={Volodymuyr Prokopyuk}%
+  ,pdfkeywords={Ukrainian folk stories}%
+}
+% paragraphs
+\setlength{\parindent}{20pt}
+
+\begin{document}
+  % title page
+  \thispagestyle{empty}
+  \begin{center}
+    \vspace*{150pt}
+    \textsf{\textbf{\Huge Українські народні казки {{ part }} }}
+
+    \vspace*{30pt}
+    \textsf{\textbf{\LARGE для коханої Світлани}}
+
+    \vspace*{80pt}
+    \textsf{\textbf{\Large Володимир Прокопюк}}
+
+    \vfill
+    \textsf{Мадрид\\\today}
+  \end{center}
+
+  % table of contents
+  \newpage
+  \tableofcontents
+
+  % stories
+  {{#each stories }}
+  \newpage\vspace*{100pt}
+  \section{ {{{ title }}} }
+  \textit{ {{{ type }}} }\vspace{60pt}
+    {{#each content }}
+
+    {{{ this }}}
+    {{/each}}
+  {{/each}}
+\end{document}

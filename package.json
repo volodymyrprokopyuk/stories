@@ -1,0 +1,15 @@
+{
+  "name": "stories"
+  , "version": "0.1.0"
+  , "author": "Volodymyr Prokopyuk <volodymyrprokopyuk@gmail.com>"
+  , "private": true
+  , "main": "main.js"
+  , "dependencies": {
+    "lodash": "^2.4.*"
+    , "when": "^3.5.*"
+    , "request": "^2.44.*"
+    , "cheerio": "^0.17.*"
+    , "mkdirp": "^0.5.*"
+    , "handlebars": "^2.0.*"
+  }
+}
