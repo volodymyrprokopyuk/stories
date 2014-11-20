@@ -81,7 +81,7 @@ var saveStories = function(stories) {
   var writeJSONFile = _.partial(writeFile, 'json/' + config.part + '.json'
     , json);
   return pipeline([ makeJSONDir, writeJSONFile, function() {
-    return '  save stories: done';
+    return 'save stories: done';
   } ]);
 };
 
